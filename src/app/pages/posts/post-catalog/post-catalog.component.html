@@ -1,0 +1,9 @@
+<h2>Post Catalog</h2>
+<ul *ngIf="postList.length > 0">
+    <li *ngFor="let post of postList | slice:0:8">
+        <h4>{{ post.title }}</h4>
+        <p>{{ post.body }}</p>
+        <a class="detail" routerLink="{{ post.id }}">See Detail </a>
+        <a routerLink="">Edit</a>
+    </li>
+</ul>
